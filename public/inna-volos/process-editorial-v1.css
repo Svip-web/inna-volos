@@ -1,0 +1,198 @@
+/* Editorial process layout: one introduction and one continuous sequence. */
+.process { padding: 92px 0; }
+
+.process .container {
+  display: grid;
+  grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr);
+  gap: clamp(58px, 6vw, 88px);
+  align-items: start;
+}
+
+.process .process-heading {
+  position: static;
+  max-width: 450px;
+  margin: 0;
+  text-align: left;
+}
+
+.process .process-heading h2 {
+  max-width: 450px;
+  margin: 0;
+  font-size: clamp(38px, 3.2vw, 48px);
+  line-height: 1.06;
+}
+
+.process .process-heading > .process-kicker {
+  margin: 0 0 24px;
+  color: #96601c;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .18em;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+.process .process-heading > .process-intro {
+  max-width: 360px;
+  margin: 26px 0 0;
+  color: #52665c;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.process .process-title-accent { display: block; margin-top: 12px; }
+
+.process .process-steps {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  list-style: none;
+  border: 0;
+  border-top: 1px solid rgba(169, 103, 22, .35);
+}
+
+.process .process-steps li,
+.process .process-steps li:first-child,
+.process .process-steps li:nth-child(2),
+.process .process-steps li:nth-child(3),
+.process .process-steps li:last-child {
+  min-width: 0;
+  min-height: 0;
+  padding: 26px 0;
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr) 44px;
+  grid-template-rows: auto auto;
+  gap: 8px 22px;
+  align-items: start;
+  border: 0;
+  border-bottom: 1px solid rgba(0, 47, 36, .17);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  opacity: 1;
+  transform: none;
+  translate: none;
+  transition: none;
+  animation: none;
+}
+
+.process .process-steps::before,
+.process .process-steps::after,
+.process .process-steps li::before,
+.process .process-steps li:nth-child(2)::before,
+.process .process-steps li:last-child::before {
+  display: none;
+  content: none;
+}
+
+.process .process-step-symbol { display: contents; }
+
+.process .process-step-symbol svg {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+  align-self: center;
+  justify-self: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  color: #96601c;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.process .process-step-number,
+.process .process-steps li:last-child .process-step-number {
+  position: static;
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  width: auto;
+  height: auto;
+  margin: 2px 0 0;
+  display: block;
+  border: 0;
+  border-radius: 0;
+  color: #8e5915;
+  background: transparent;
+  font-family: var(--iv-display);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: -.02em;
+}
+
+.process .process-steps li:last-child .process-step-symbol svg {
+  width: 44px;
+  height: 44px;
+  padding: 9px;
+  border-radius: 50%;
+  color: #efbd62;
+  background: var(--iv-emerald);
+}
+
+.process .process-steps h3 {
+  grid-column: 2;
+  grid-row: 1;
+  min-height: 0;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  font-size: clamp(25px, 2.1vw, 29px);
+  line-height: 1.18;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+  text-wrap: wrap;
+}
+
+.process .process-steps p {
+  grid-column: 2;
+  grid-row: 2;
+  min-height: 0;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  color: #52665c;
+  font-size: 15px;
+  line-height: 1.65;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+}
+
+@media (max-width: 920px) {
+  .process .container { grid-template-columns: 1fr; gap: 38px; }
+  .process .process-heading,
+  .process .process-heading h2 { max-width: 680px; }
+  .process .process-heading > .process-intro { max-width: 520px; }
+}
+
+@media (max-width: 720px) {
+  .process { padding: 68px 0; }
+  .process .container { gap: 32px; }
+  .process .process-heading h2 { font-size: var(--iv-section-title-size); }
+  .process .process-heading > .process-kicker { margin-bottom: 20px; }
+  .process .process-heading > .process-intro { margin-top: 22px; font-size: 15px; }
+  .process .process-steps li,
+  .process .process-steps li:first-child,
+  .process .process-steps li:nth-child(2),
+  .process .process-steps li:nth-child(3),
+  .process .process-steps li:last-child {
+    grid-template-columns: 28px minmax(0, 1fr);
+    gap: 8px 16px;
+    padding: 22px 0;
+  }
+  .process .process-step-symbol svg,
+  .process .process-steps li:last-child .process-step-symbol svg { display: none; }
+  .process .process-step-number,
+  .process .process-steps li:last-child .process-step-number { font-size: 22px; }
+  .process .process-steps h3 { font-size: 24px; }
+  .process .process-steps p { font-size: 14px; }
+}
+

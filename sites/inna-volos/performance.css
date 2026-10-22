@@ -1,0 +1,18 @@
+/* No offscreen paint work; entering the viewport restores the original motion. */
+.is-visual-offscreen,
+.is-visual-offscreen *,
+.is-visual-offscreen::before,
+.is-visual-offscreen::after,
+.is-visual-offscreen *::before,
+.is-visual-offscreen *::after {
+  animation-play-state: paused !important;
+}
+
+/* The first screen is readable immediately, without an entrance delay. */
+.js.motion-ready .hero-copy > *,
+.js.motion-ready .hero-copy.reveal {
+  opacity: 1;
+  translate: none;
+  transform: none;
+  transition: none;
+}

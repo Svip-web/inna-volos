@@ -1,0 +1,11 @@
+{
+  "name": "inna-volos",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "build": "node scripts/inna-build.mjs",
+    "check": "node scripts/inna-build.mjs --check",
+    "test": "node --test scripts/inna-build.test.mjs scripts/inna-delivery.test.mjs scripts/requests-motion.test.mjs scripts/performance-motion.test.mjs scripts/scroll-reveal.test.mjs"
+  }
+}

@@ -1,0 +1,602 @@
+{
+  "fileCount": 149,
+  "totalBytes": 7820646,
+  "files": [
+    {
+      "name": ".gitattributes",
+      "bytes": 92
+    },
+    {
+      "name": ".github/workflows/pages.yml",
+      "bytes": 1117
+    },
+    {
+      "name": ".gitignore",
+      "bytes": 43
+    },
+    {
+      "name": "package.json",
+      "bytes": 400
+    },
+    {
+      "name": "public/inna-volos/app.js",
+      "bytes": 11868
+    },
+    {
+      "name": "public/inna-volos/assets/about-inna-neural-v1.webp",
+      "bytes": 156624
+    },
+    {
+      "name": "public/inna-volos/assets/audience-adults-v1-1280.webp",
+      "bytes": 108540
+    },
+    {
+      "name": "public/inna-volos/assets/audience-adults-v1-640.webp",
+      "bytes": 39564
+    },
+    {
+      "name": "public/inna-volos/assets/audience-adults-v1-960.webp",
+      "bytes": 71574
+    },
+    {
+      "name": "public/inna-volos/assets/audience-teens-v1-1280.webp",
+      "bytes": 88134
+    },
+    {
+      "name": "public/inna-volos/assets/audience-teens-v1-640.webp",
+      "bytes": 34860
+    },
+    {
+      "name": "public/inna-volos/assets/audience-teens-v1-960.webp",
+      "bytes": 59340
+    },
+    {
+      "name": "public/inna-volos/assets/brain-luminous-panel-v1.webp",
+      "bytes": 91126
+    },
+    {
+      "name": "public/inna-volos/assets/fonts/cormorant-garamond-italic-cyrillic-ext.woff2",
+      "bytes": 14748
+    },
+    {
+      "name": "public/inna-volos/assets/fonts/cormorant-garamond-italic-cyrillic.woff2",
+      "bytes": 12720
+    },
+    {
+      "name": "public/inna-volos/assets/fonts/cormorant-garamond-italic-latin.woff2",
+      "bytes": 23660
+    },
+    {
+      "name": "public/inna-volos/assets/fonts/cormorant-garamond-normal-cyrillic-ext.woff2",
+      "bytes": 23416
+    },
+    {
+      "name": "public/inna-volos/assets/fonts/cormorant-garamond-normal-cyrillic.woff2",
+      "bytes": 21168
+    },
+    {
+      "name": "public/inna-volos/assets/fonts/cormorant-garamond-normal-latin.woff2",
+      "bytes": 37640
+    },
+    {
+      "name": "public/inna-volos/assets/fonts/manrope-cyrillic-ext.woff2",
+      "bytes": 2552
+    },
+    {
+      "name": "public/inna-volos/assets/fonts/manrope-cyrillic.woff2",
+      "bytes": 14500
+    },
+    {
+      "name": "public/inna-volos/assets/fonts/manrope-latin.woff2",
+      "bytes": 24836
+    },
+    {
+      "name": "public/inna-volos/assets/fonts/OFL.txt",
+      "bytes": 4914
+    },
+    {
+      "name": "public/inna-volos/assets/fonts/tenor-sans-cyrillic.woff2",
+      "bytes": 11644
+    },
+    {
+      "name": "public/inna-volos/assets/fonts/tenor-sans-latin.woff2",
+      "bytes": 18588
+    },
+    {
+      "name": "public/inna-volos/assets/hero-neural-desktop-v2-1280.webp",
+      "bytes": 97844
+    },
+    {
+      "name": "public/inna-volos/assets/hero-neural-desktop-v2-1672.webp",
+      "bytes": 138890
+    },
+    {
+      "name": "public/inna-volos/assets/hero-neural-desktop-v2-960.webp",
+      "bytes": 65724
+    },
+    {
+      "name": "public/inna-volos/assets/hero-neural-mobile-v2-480.webp",
+      "bytes": 57774
+    },
+    {
+      "name": "public/inna-volos/assets/hero-neural-mobile-v2-768.webp",
+      "bytes": 109402
+    },
+    {
+      "name": "public/inna-volos/assets/hero-neural-mobile-v2-941.webp",
+      "bytes": 141780
+    },
+    {
+      "name": "public/inna-volos/assets/inna-original-128.webp",
+      "bytes": 4820
+    },
+    {
+      "name": "public/inna-volos/assets/inna-original-256.webp",
+      "bytes": 13804
+    },
+    {
+      "name": "public/inna-volos/assets/inna-portrait-transparent-v3-320.webp",
+      "bytes": 23426
+    },
+    {
+      "name": "public/inna-volos/assets/inna-portrait-transparent-v3-640.webp",
+      "bytes": 62012
+    },
+    {
+      "name": "public/inna-volos/assets/inna-portrait-transparent-v3-960.webp",
+      "bytes": 117994
+    },
+    {
+      "name": "public/inna-volos/assets/requests-neural-background-v1.webp",
+      "bytes": 140202
+    },
+    {
+      "name": "public/inna-volos/assets/service-consultation-v2-1280.webp",
+      "bytes": 170562
+    },
+    {
+      "name": "public/inna-volos/assets/service-consultation-v2-640.webp",
+      "bytes": 51494
+    },
+    {
+      "name": "public/inna-volos/assets/service-consultation-v2-960.webp",
+      "bytes": 104508
+    },
+    {
+      "name": "public/inna-volos/assets/service-game-v2-1280.webp",
+      "bytes": 156036
+    },
+    {
+      "name": "public/inna-volos/assets/service-game-v2-640.webp",
+      "bytes": 49478
+    },
+    {
+      "name": "public/inna-volos/assets/service-game-v2-960.webp",
+      "bytes": 98170
+    },
+    {
+      "name": "public/inna-volos/assets/service-neuroprocess-v2-1280.webp",
+      "bytes": 109620
+    },
+    {
+      "name": "public/inna-volos/assets/service-neuroprocess-v2-640.webp",
+      "bytes": 38062
+    },
+    {
+      "name": "public/inna-volos/assets/service-neuroprocess-v2-960.webp",
+      "bytes": 69068
+    },
+    {
+      "name": "public/inna-volos/assets/service-workshop-v2-1280.webp",
+      "bytes": 112502
+    },
+    {
+      "name": "public/inna-volos/assets/service-workshop-v2-640.webp",
+      "bytes": 46512
+    },
+    {
+      "name": "public/inna-volos/assets/service-workshop-v2-960.webp",
+      "bytes": 80524
+    },
+    {
+      "name": "public/inna-volos/assets/session-real-1600.webp",
+      "bytes": 168536
+    },
+    {
+      "name": "public/inna-volos/audience.css",
+      "bytes": 4822
+    },
+    {
+      "name": "public/inna-volos/fonts.css",
+      "bytes": 3659
+    },
+    {
+      "name": "public/inna-volos/hero-reference.css",
+      "bytes": 30185
+    },
+    {
+      "name": "public/inna-volos/index.html",
+      "bytes": 44270
+    },
+    {
+      "name": "public/inna-volos/index.html.br",
+      "bytes": 8415
+    },
+    {
+      "name": "public/inna-volos/index.html.gz",
+      "bytes": 10201
+    },
+    {
+      "name": "public/inna-volos/performance-motion.js",
+      "bytes": 1223
+    },
+    {
+      "name": "public/inna-volos/performance.css",
+      "bytes": 517
+    },
+    {
+      "name": "public/inna-volos/premium-buttons.css",
+      "bytes": 6992
+    },
+    {
+      "name": "public/inna-volos/process-editorial-v1.css",
+      "bytes": 4669
+    },
+    {
+      "name": "public/inna-volos/requests-motion.css",
+      "bytes": 3573
+    },
+    {
+      "name": "public/inna-volos/requests-motion.js",
+      "bytes": 2394
+    },
+    {
+      "name": "public/inna-volos/reviews.css",
+      "bytes": 2529
+    },
+    {
+      "name": "public/inna-volos/scroll-reveal.css",
+      "bytes": 1358
+    },
+    {
+      "name": "public/inna-volos/scroll-reveal.js",
+      "bytes": 5043
+    },
+    {
+      "name": "public/inna-volos/section-system.css",
+      "bytes": 54693
+    },
+    {
+      "name": "public/inna-volos/site.min.css",
+      "bytes": 276725
+    },
+    {
+      "name": "public/inna-volos/site.min.css.br",
+      "bytes": 36701
+    },
+    {
+      "name": "public/inna-volos/site.min.css.gz",
+      "bytes": 47082
+    },
+    {
+      "name": "public/inna-volos/site.min.js",
+      "bytes": 20624
+    },
+    {
+      "name": "public/inna-volos/site.min.js.br",
+      "bytes": 4905
+    },
+    {
+      "name": "public/inna-volos/site.min.js.gz",
+      "bytes": 5769
+    },
+    {
+      "name": "public/inna-volos/styles.css",
+      "bytes": 207001
+    },
+    {
+      "name": "README.md",
+      "bytes": 2870
+    },
+    {
+      "name": "scripts/inna-build.mjs",
+      "bytes": 9722
+    },
+    {
+      "name": "scripts/inna-build.test.mjs",
+      "bytes": 4628
+    },
+    {
+      "name": "scripts/inna-delivery.test.mjs",
+      "bytes": 7758
+    },
+    {
+      "name": "scripts/performance-motion.test.mjs",
+      "bytes": 5612
+    },
+    {
+      "name": "scripts/requests-motion.test.mjs",
+      "bytes": 7204
+    },
+    {
+      "name": "scripts/scroll-reveal.test.mjs",
+      "bytes": 12980
+    },
+    {
+      "name": "sites/inna-volos/app.js",
+      "bytes": 11868
+    },
+    {
+      "name": "sites/inna-volos/assets/about-inna-neural-v1.webp",
+      "bytes": 156624
+    },
+    {
+      "name": "sites/inna-volos/assets/audience-adults-v1-1280.webp",
+      "bytes": 108540
+    },
+    {
+      "name": "sites/inna-volos/assets/audience-adults-v1-640.webp",
+      "bytes": 39564
+    },
+    {
+      "name": "sites/inna-volos/assets/audience-adults-v1-960.webp",
+      "bytes": 71574
+    },
+    {
+      "name": "sites/inna-volos/assets/audience-teens-v1-1280.webp",
+      "bytes": 88134
+    },
+    {
+      "name": "sites/inna-volos/assets/audience-teens-v1-640.webp",
+      "bytes": 34860
+    },
+    {
+      "name": "sites/inna-volos/assets/audience-teens-v1-960.webp",
+      "bytes": 59340
+    },
+    {
+      "name": "sites/inna-volos/assets/brain-luminous-panel-v1.webp",
+      "bytes": 91126
+    },
+    {
+      "name": "sites/inna-volos/assets/fonts/cormorant-garamond-italic-cyrillic-ext.woff2",
+      "bytes": 14748
+    },
+    {
+      "name": "sites/inna-volos/assets/fonts/cormorant-garamond-italic-cyrillic.woff2",
+      "bytes": 12720
+    },
+    {
+      "name": "sites/inna-volos/assets/fonts/cormorant-garamond-italic-latin.woff2",
+      "bytes": 23660
+    },
+    {
+      "name": "sites/inna-volos/assets/fonts/cormorant-garamond-normal-cyrillic-ext.woff2",
+      "bytes": 23416
+    },
+    {
+      "name": "sites/inna-volos/assets/fonts/cormorant-garamond-normal-cyrillic.woff2",
+      "bytes": 21168
+    },
+    {
+      "name": "sites/inna-volos/assets/fonts/cormorant-garamond-normal-latin.woff2",
+      "bytes": 37640
+    },
+    {
+      "name": "sites/inna-volos/assets/fonts/manrope-cyrillic-ext.woff2",
+      "bytes": 2552
+    },
+    {
+      "name": "sites/inna-volos/assets/fonts/manrope-cyrillic.woff2",
+      "bytes": 14500
+    },
+    {
+      "name": "sites/inna-volos/assets/fonts/manrope-latin.woff2",
+      "bytes": 24836
+    },
+    {
+      "name": "sites/inna-volos/assets/fonts/OFL.txt",
+      "bytes": 4914
+    },
+    {
+      "name": "sites/inna-volos/assets/fonts/tenor-sans-cyrillic.woff2",
+      "bytes": 11644
+    },
+    {
+      "name": "sites/inna-volos/assets/fonts/tenor-sans-latin.woff2",
+      "bytes": 18588
+    },
+    {
+      "name": "sites/inna-volos/assets/hero-neural-desktop-v2-1280.webp",
+      "bytes": 97844
+    },
+    {
+      "name": "sites/inna-volos/assets/hero-neural-desktop-v2-1672.webp",
+      "bytes": 138890
+    },
+    {
+      "name": "sites/inna-volos/assets/hero-neural-desktop-v2-960.webp",
+      "bytes": 65724
+    },
+    {
+      "name": "sites/inna-volos/assets/hero-neural-mobile-v2-480.webp",
+      "bytes": 57774
+    },
+    {
+      "name": "sites/inna-volos/assets/hero-neural-mobile-v2-768.webp",
+      "bytes": 109402
+    },
+    {
+      "name": "sites/inna-volos/assets/hero-neural-mobile-v2-941.webp",
+      "bytes": 141780
+    },
+    {
+      "name": "sites/inna-volos/assets/inna-original-128.webp",
+      "bytes": 4820
+    },
+    {
+      "name": "sites/inna-volos/assets/inna-original-256.webp",
+      "bytes": 13804
+    },
+    {
+      "name": "sites/inna-volos/assets/inna-portrait-transparent-v3-320.webp",
+      "bytes": 23426
+    },
+    {
+      "name": "sites/inna-volos/assets/inna-portrait-transparent-v3-640.webp",
+      "bytes": 62012
+    },
+    {
+      "name": "sites/inna-volos/assets/inna-portrait-transparent-v3-960.webp",
+      "bytes": 117994
+    },
+    {
+      "name": "sites/inna-volos/assets/requests-neural-background-v1.webp",
+      "bytes": 140202
+    },
+    {
+      "name": "sites/inna-volos/assets/service-consultation-v2-1280.webp",
+      "bytes": 170562
+    },
+    {
+      "name": "sites/inna-volos/assets/service-consultation-v2-640.webp",
+      "bytes": 51494
+    },
+    {
+      "name": "sites/inna-volos/assets/service-consultation-v2-960.webp",
+      "bytes": 104508
+    },
+    {
+      "name": "sites/inna-volos/assets/service-game-v2-1280.webp",
+      "bytes": 156036
+    },
+    {
+      "name": "sites/inna-volos/assets/service-game-v2-640.webp",
+      "bytes": 49478
+    },
+    {
+      "name": "sites/inna-volos/assets/service-game-v2-960.webp",
+      "bytes": 98170
+    },
+    {
+      "name": "sites/inna-volos/assets/service-neuroprocess-v2-1280.webp",
+      "bytes": 109620
+    },
+    {
+      "name": "sites/inna-volos/assets/service-neuroprocess-v2-640.webp",
+      "bytes": 38062
+    },
+    {
+      "name": "sites/inna-volos/assets/service-neuroprocess-v2-960.webp",
+      "bytes": 69068
+    },
+    {
+      "name": "sites/inna-volos/assets/service-workshop-v2-1280.webp",
+      "bytes": 112502
+    },
+    {
+      "name": "sites/inna-volos/assets/service-workshop-v2-640.webp",
+      "bytes": 46512
+    },
+    {
+      "name": "sites/inna-volos/assets/service-workshop-v2-960.webp",
+      "bytes": 80524
+    },
+    {
+      "name": "sites/inna-volos/assets/session-real-1600.webp",
+      "bytes": 168536
+    },
+    {
+      "name": "sites/inna-volos/audience.css",
+      "bytes": 4822
+    },
+    {
+      "name": "sites/inna-volos/fonts.css",
+      "bytes": 3659
+    },
+    {
+      "name": "sites/inna-volos/hero-reference.css",
+      "bytes": 30185
+    },
+    {
+      "name": "sites/inna-volos/index.html",
+      "bytes": 44270
+    },
+    {
+      "name": "sites/inna-volos/index.html.br",
+      "bytes": 8415
+    },
+    {
+      "name": "sites/inna-volos/index.html.gz",
+      "bytes": 10201
+    },
+    {
+      "name": "sites/inna-volos/performance-motion.js",
+      "bytes": 1223
+    },
+    {
+      "name": "sites/inna-volos/performance.css",
+      "bytes": 517
+    },
+    {
+      "name": "sites/inna-volos/premium-buttons.css",
+      "bytes": 6992
+    },
+    {
+      "name": "sites/inna-volos/process-editorial-v1.css",
+      "bytes": 4669
+    },
+    {
+      "name": "sites/inna-volos/requests-motion.css",
+      "bytes": 3573
+    },
+    {
+      "name": "sites/inna-volos/requests-motion.js",
+      "bytes": 2394
+    },
+    {
+      "name": "sites/inna-volos/reviews.css",
+      "bytes": 2529
+    },
+    {
+      "name": "sites/inna-volos/scroll-reveal.css",
+      "bytes": 1358
+    },
+    {
+      "name": "sites/inna-volos/scroll-reveal.js",
+      "bytes": 5043
+    },
+    {
+      "name": "sites/inna-volos/section-system.css",
+      "bytes": 54693
+    },
+    {
+      "name": "sites/inna-volos/site.min.css",
+      "bytes": 276725
+    },
+    {
+      "name": "sites/inna-volos/site.min.css.br",
+      "bytes": 36701
+    },
+    {
+      "name": "sites/inna-volos/site.min.css.gz",
+      "bytes": 47082
+    },
+    {
+      "name": "sites/inna-volos/site.min.js",
+      "bytes": 20624
+    },
+    {
+      "name": "sites/inna-volos/site.min.js.br",
+      "bytes": 4905
+    },
+    {
+      "name": "sites/inna-volos/site.min.js.gz",
+      "bytes": 5769
+    },
+    {
+      "name": "sites/inna-volos/styles.css",
+      "bytes": 207001
+    }
+  ]
+}

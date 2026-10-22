@@ -1,0 +1,148 @@
+/* Large neural backdrop: stationary artwork with light travelling along links. */
+.requests .requests-intro {
+  position: relative;
+  min-height: 340px;
+  margin-bottom: 28px;
+}
+
+.requests .requests-heading { position: relative; z-index: 1; }
+.requests .request-grid { position: relative; z-index: 2; }
+
+.requests .request-panel,
+.requests .request-panel:nth-child(n),
+.requests .request-panel:hover {
+  background: linear-gradient(135deg, rgba(9, 59, 46, .96), rgba(4, 43, 34, .94));
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.requests .requests-neural {
+  position: absolute;
+  top: -140px;
+  right: -115px;
+  z-index: 0;
+  min-width: 0;
+  width: 1000px;
+  height: 760px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.requests .requests-neural-scene {
+  display: block;
+  flex: 1 1 auto;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.requests .requests-neural-art {
+  transform: none;
+  filter: none;
+}
+
+.requests .requests-neural-trace {
+  fill: none;
+  stroke: #f7cf7a;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 45 155;
+  opacity: .85;
+}
+
+.requests.is-motion-ready .requests-neural-trace {
+  animation: requests-neural-flow 8.8s linear infinite;
+}
+
+.requests.is-motion-ready .requests-neural-trace:nth-of-type(2) {
+  animation-duration: 10.4s;
+  animation-delay: -3s;
+}
+
+.requests.is-motion-ready .requests-neural-trace:nth-of-type(3) {
+  animation-duration: 7.6s;
+  animation-delay: -1.8s;
+}
+
+.requests.is-motion-ready .requests-neural-trace:nth-of-type(4) { animation-delay: -3.8s; }
+.requests.is-motion-ready .requests-neural-trace:nth-of-type(5) { animation-delay: -1.6s; }
+.requests.is-motion-ready .requests-neural-trace:nth-of-type(6) { animation-delay: -4.2s; }
+
+.requests.is-motion-paused .requests-neural-trace,
+.requests.is-motion-offscreen .requests-neural-trace {
+  animation-play-state: paused;
+}
+
+.requests [data-requests-motion-toggle] {
+  display: none;
+  position: absolute;
+  inset: 6%;
+  width: 88%;
+  height: 88%;
+  margin: 0;
+  padding: 0;
+  appearance: none;
+  border: 0;
+  border-radius: 24px;
+  background: transparent;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.requests.is-motion-ready [data-requests-motion-toggle] {
+  display: block;
+}
+
+.requests [data-requests-motion-toggle]:focus-visible {
+  outline: 2px solid var(--iv-gold-light, #efbd62);
+  outline-offset: -4px;
+}
+
+@keyframes requests-neural-flow {
+  from { stroke-dashoffset: 1000; }
+  to { stroke-dashoffset: 0; }
+}
+
+@media (max-width: 1120px) {
+  .requests .requests-heading { max-width: 360px; }
+  .requests .requests-neural { top: -70px; right: -200px; width: 760px; height: 580px; }
+}
+
+@media (max-width: 920px) {
+  .requests .requests-intro { grid-template-columns: 1fr; min-height: 0; gap: 18px; }
+  .requests .requests-heading { max-width: 530px; }
+  .requests .requests-neural {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: calc(100% + 100px);
+    height: 520px;
+    margin: 0 -50px -150px;
+  }
+}
+
+@media (max-width: 720px) {
+  .requests .requests-intro { min-height: 0; margin-bottom: 28px; }
+  .requests .requests-neural {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: calc(100% + 110px);
+    height: 380px;
+    margin: 0 -55px -110px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .requests.is-motion-ready .requests-neural-trace {
+    animation: none;
+  }
+
+  .requests.is-motion-ready [data-requests-motion-toggle] { display: none; }
+}
+
