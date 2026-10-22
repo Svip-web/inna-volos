@@ -1,9 +1,11 @@
-/* The upper Problem story only. The lower recognition rows/footer stay intact. */
+/* Photo-led upper Problem composition. Lower recognition rows/footer stay intact. */
 #problem .problem-editorial {
   display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr);
+  grid-template-columns: minmax(0, .84fr) minmax(0, 1.16fr);
+  grid-template-areas: "visual story" "statement statement";
   align-items: center;
-  gap: clamp(48px, 6vw, 80px);
+  column-gap: clamp(48px, 6vw, 80px);
+  row-gap: 36px;
   width: min(1240px, calc(100% - 80px));
   min-height: 0;
   margin-inline: auto;
@@ -16,6 +18,7 @@
 }
 
 #problem .problem-editorial .problem-story {
+  grid-area: story;
   min-width: 0;
   min-height: 0;
   padding: 18px 0;
@@ -74,30 +77,43 @@
 }
 
 #problem .problem-editorial .problem-statement {
-  max-width: 510px;
-  margin: 28px 0 0;
-  padding: 0 0 0 18px;
+  grid-area: statement;
+  display: grid;
+  grid-template-columns: minmax(0, .84fr) minmax(0, 1.16fr);
+  column-gap: clamp(48px, 6vw, 80px);
+  row-gap: 10px;
+  align-items: baseline;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 26px 0 0;
   border: 0;
-  border-left: 1px solid rgba(239, 189, 98, .7);
+  border-top: 1px solid rgba(239, 189, 98, .28);
   border-radius: 0;
   color: #efbd62;
   background: transparent;
   box-shadow: none;
   font-family: var(--iv-display);
-  font-size: 25px;
+  font-size: clamp(26px, 2.3vw, 32px);
   font-style: normal;
   font-weight: 400;
   line-height: 1.35;
 }
 
+#problem .problem-editorial .problem-statement span:first-child {
+  color: rgba(245, 241, 231, .78);
+  font-size: clamp(21px, 1.8vw, 25px);
+}
+
 #problem .problem-editorial .problem-visual {
+  grid-area: visual;
   position: relative;
   display: grid;
   grid-template-rows: minmax(0, 1fr) auto;
-  justify-self: end;
+  justify-self: start;
   align-self: center;
   width: 100%;
-  max-width: 520px;
+  max-width: 480px;
   min-width: 0;
   min-height: 0;
   height: auto;
@@ -158,13 +174,15 @@
 @media (max-width: 1160px) {
   #problem .problem-editorial {
     width: calc(100% - 56px);
-    gap: 44px;
+    column-gap: 44px;
   }
+  #problem .problem-editorial .problem-statement { column-gap: 44px; }
 }
 
 @media (max-width: 900px) {
   #problem .problem-editorial {
     grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "story" "visual" "statement";
     width: calc(100% - 48px);
     gap: 32px;
   }
@@ -179,6 +197,9 @@
 
   #problem .problem-editorial .problem-visual {
     justify-self: center;
+  }
+  #problem .problem-editorial .problem-statement {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
@@ -202,9 +223,9 @@
   }
 
   #problem .problem-editorial .problem-statement {
-    margin-top: 24px;
-    padding-left: 16px;
-    font-size: 23px;
+    margin: 0;
+    padding: 22px 0 0;
+    font-size: 27px;
   }
 
   #problem .problem-editorial .problem-photo-caption {
