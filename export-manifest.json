@@ -1,6 +1,6 @@
 {
-  "fileCount": 149,
-  "totalBytes": 7820646,
+  "fileCount": 157,
+  "totalBytes": 8222101,
   "files": [
     {
       "name": ".gitattributes",
@@ -147,6 +147,18 @@
       "bytes": 117994
     },
     {
+      "name": "public/inna-volos/assets/problem-inna-editorial-v2-1024.webp",
+      "bytes": 94352
+    },
+    {
+      "name": "public/inna-volos/assets/problem-inna-editorial-v2-480.webp",
+      "bytes": 32924
+    },
+    {
+      "name": "public/inna-volos/assets/problem-inna-editorial-v2-768.webp",
+      "bytes": 64078
+    },
+    {
       "name": "public/inna-volos/assets/requests-neural-background-v1.webp",
       "bytes": 140202
     },
@@ -216,15 +228,15 @@
     },
     {
       "name": "public/inna-volos/index.html",
-      "bytes": 44270
+      "bytes": 43907
     },
     {
       "name": "public/inna-volos/index.html.br",
-      "bytes": 8415
+      "bytes": 8302
     },
     {
       "name": "public/inna-volos/index.html.gz",
-      "bytes": 10201
+      "bytes": 10031
     },
     {
       "name": "public/inna-volos/performance-motion.js",
@@ -237,6 +249,10 @@
     {
       "name": "public/inna-volos/premium-buttons.css",
       "bytes": 6992
+    },
+    {
+      "name": "public/inna-volos/problem-refresh-v2.css",
+      "bytes": 4776
     },
     {
       "name": "public/inna-volos/process-editorial-v1.css",
@@ -268,15 +284,15 @@
     },
     {
       "name": "public/inna-volos/site.min.css",
-      "bytes": 276725
+      "bytes": 280861
     },
     {
       "name": "public/inna-volos/site.min.css.br",
-      "bytes": 36701
+      "bytes": 37164
     },
     {
       "name": "public/inna-volos/site.min.css.gz",
-      "bytes": 47082
+      "bytes": 47682
     },
     {
       "name": "public/inna-volos/site.min.js",
@@ -300,11 +316,11 @@
     },
     {
       "name": "scripts/inna-build.mjs",
-      "bytes": 9722
+      "bytes": 9750
     },
     {
       "name": "scripts/inna-build.test.mjs",
-      "bytes": 4628
+      "bytes": 4689
     },
     {
       "name": "scripts/inna-delivery.test.mjs",
@@ -451,6 +467,18 @@
       "bytes": 117994
     },
     {
+      "name": "sites/inna-volos/assets/problem-inna-editorial-v2-1024.webp",
+      "bytes": 94352
+    },
+    {
+      "name": "sites/inna-volos/assets/problem-inna-editorial-v2-480.webp",
+      "bytes": 32924
+    },
+    {
+      "name": "sites/inna-volos/assets/problem-inna-editorial-v2-768.webp",
+      "bytes": 64078
+    },
+    {
       "name": "sites/inna-volos/assets/requests-neural-background-v1.webp",
       "bytes": 140202
     },
@@ -520,15 +548,15 @@
     },
     {
       "name": "sites/inna-volos/index.html",
-      "bytes": 44270
+      "bytes": 43907
     },
     {
       "name": "sites/inna-volos/index.html.br",
-      "bytes": 8415
+      "bytes": 8302
     },
     {
       "name": "sites/inna-volos/index.html.gz",
-      "bytes": 10201
+      "bytes": 10031
     },
     {
       "name": "sites/inna-volos/performance-motion.js",
@@ -541,6 +569,10 @@
     {
       "name": "sites/inna-volos/premium-buttons.css",
       "bytes": 6992
+    },
+    {
+      "name": "sites/inna-volos/problem-refresh-v2.css",
+      "bytes": 4776
     },
     {
       "name": "sites/inna-volos/process-editorial-v1.css",
@@ -572,15 +604,15 @@
     },
     {
       "name": "sites/inna-volos/site.min.css",
-      "bytes": 276725
+      "bytes": 280861
     },
     {
       "name": "sites/inna-volos/site.min.css.br",
-      "bytes": 36701
+      "bytes": 37164
     },
     {
       "name": "sites/inna-volos/site.min.css.gz",
-      "bytes": 47082
+      "bytes": 47682
     },
     {
       "name": "sites/inna-volos/site.min.js",

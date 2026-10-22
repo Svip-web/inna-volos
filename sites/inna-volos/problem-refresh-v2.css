@@ -1,0 +1,214 @@
+/* The upper Problem story only. The lower recognition rows/footer stay intact. */
+#problem .problem-editorial {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr);
+  align-items: center;
+  gap: clamp(48px, 6vw, 80px);
+  width: min(1240px, calc(100% - 80px));
+  min-height: 0;
+  margin-inline: auto;
+  padding: 0;
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+#problem .problem-editorial .problem-story {
+  min-width: 0;
+  min-height: 0;
+  padding: 18px 0;
+  color: #f5f1e7;
+  background: transparent;
+}
+
+#problem .problem-editorial .problem-eyebrow {
+  margin: 0 0 22px;
+  color: #efbd62;
+  font-family: var(--iv-body);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+#problem .problem-editorial .problem-story h2 {
+  max-width: 600px;
+  margin: 0 0 28px;
+  color: #f5f1e7;
+  font-family: var(--iv-display);
+  font-size: clamp(36px, 3.35vw, 48px);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -.035em;
+  text-wrap: balance;
+}
+
+#problem .problem-editorial .problem-story h2 em {
+  display: block;
+  margin-top: 12px;
+  color: #efbd62;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+}
+
+#problem .problem-editorial .problem-lead,
+#problem .problem-editorial .problem-detail {
+  max-width: 560px;
+  color: rgba(245, 241, 231, .8);
+  font-family: var(--iv-body);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+#problem .problem-editorial .problem-lead { margin: 0 0 18px; }
+#problem .problem-editorial .problem-detail { margin: 0; }
+
+#problem .problem-editorial .problem-story strong {
+  color: inherit;
+  font-weight: 600;
+}
+
+#problem .problem-editorial .problem-statement {
+  max-width: 510px;
+  margin: 28px 0 0;
+  padding: 0 0 0 18px;
+  border: 0;
+  border-left: 1px solid rgba(239, 189, 98, .7);
+  border-radius: 0;
+  color: #efbd62;
+  background: transparent;
+  box-shadow: none;
+  font-family: var(--iv-display);
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+#problem .problem-editorial .problem-visual {
+  position: relative;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  justify-self: end;
+  align-self: center;
+  width: 100%;
+  max-width: 520px;
+  min-width: 0;
+  min-height: 0;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid rgba(239, 189, 98, .22);
+  border-radius: 24px;
+  background: #0a382b;
+  box-shadow: none;
+}
+
+#problem .problem-editorial .problem-visual::before,
+#problem .problem-editorial .problem-visual::after {
+  display: none;
+  content: none;
+}
+
+#problem .problem-editorial .problem-editorial-photo {
+  position: static;
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  max-width: none;
+  object-fit: cover;
+  object-position: 50% 20%;
+  border-radius: 0;
+  filter: none;
+}
+
+#problem .problem-editorial .problem-photo-caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px 20px;
+  min-height: 60px;
+  margin: 0;
+  padding: 15px 22px;
+  border-top: 1px solid rgba(239, 189, 98, .18);
+  color: rgba(245, 241, 231, .66);
+  background: #0a382b;
+  font-family: var(--iv-body);
+  font-size: 12px;
+  line-height: 1.4;
+  letter-spacing: .02em;
+}
+
+#problem .problem-editorial .problem-photo-caption span:first-child {
+  color: #f5f1e7;
+  font-family: var(--iv-display);
+  font-size: 20px;
+  letter-spacing: -.02em;
+}
+
+@media (max-width: 1160px) {
+  #problem .problem-editorial {
+    width: calc(100% - 56px);
+    gap: 44px;
+  }
+}
+
+@media (max-width: 900px) {
+  #problem .problem-editorial {
+    grid-template-columns: minmax(0, 1fr);
+    width: calc(100% - 48px);
+    gap: 32px;
+  }
+
+  #problem .problem-editorial .problem-story {
+    padding: 0;
+  }
+
+  #problem .problem-editorial .problem-story h2,
+  #problem .problem-editorial .problem-lead,
+  #problem .problem-editorial .problem-detail { max-width: 680px; }
+
+  #problem .problem-editorial .problem-visual {
+    justify-self: center;
+  }
+}
+
+@media (max-width: 767px) {
+  #problem .problem-editorial {
+    width: calc(100% - 32px);
+    gap: 28px;
+  }
+
+  #problem .problem-editorial .problem-eyebrow { margin-bottom: 18px; }
+
+  #problem .problem-editorial .problem-story h2 {
+    margin-bottom: 24px;
+    font-size: clamp(36px, 9vw, 40px);
+  }
+
+  #problem .problem-editorial .problem-lead,
+  #problem .problem-editorial .problem-detail {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  #problem .problem-editorial .problem-statement {
+    margin-top: 24px;
+    padding-left: 16px;
+    font-size: 23px;
+  }
+
+  #problem .problem-editorial .problem-photo-caption {
+    min-height: 56px;
+    padding: 13px 18px;
+  }
+}

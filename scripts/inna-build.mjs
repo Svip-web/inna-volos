@@ -18,6 +18,7 @@ export const CSS_INPUTS = Object.freeze([
   'process-editorial-v1.css',
   'premium-buttons.css',
   'performance.css',
+  'problem-refresh-v2.css',
   'scroll-reveal.css',
 ]);
 export const JS_INPUTS = Object.freeze(['app.js', 'requests-motion.js', 'performance-motion.js', 'scroll-reveal.js']);

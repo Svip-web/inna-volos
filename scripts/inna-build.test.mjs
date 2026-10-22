@@ -54,9 +54,10 @@ test('non-bundled HTML is not modified and missing bundle hashes fail', () => {
 });
 
 test('generated bundles and compression sidecars are mirrored and reversible', async () => {
-  assert.equal(CSS_INPUTS.length, 11);
+  assert.equal(CSS_INPUTS.length, 12);
   assert.equal(CSS_INPUTS[0], 'fonts.css');
   assert.equal(CSS_INPUTS.at(-1), 'scroll-reveal.css');
+  assert.equal(CSS_INPUTS.at(-2), 'problem-refresh-v2.css');
   assert.equal(JS_INPUTS.length, 4);
   assert.equal(JS_INPUTS.at(-1), 'scroll-reveal.js');
   for (const name of ['site.min.css', 'site.min.js']) {
