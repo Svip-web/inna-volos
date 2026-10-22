@@ -185,6 +185,63 @@ test('upcoming services contain only the two approved directions after the exist
   }
 });
 
+test('approved PDF copy is preserved in the hero and problem sections of both HTML mirrors', async () => {
+  const entities = { nbsp: ' ', amp: '&', quot: '"', apos: "'", lt: '<', gt: '>' };
+  const normalizeText = (markup) => markup
+    .replace(/<br\b[^>]*>/gi, ' ')
+    .replace(/<[^>]*>/g, '')
+    .replace(/&(#x[\da-f]+|#\d+|[a-z]+);/gi, (entity, value) => {
+      if (value.startsWith('#')) {
+        const hexadecimal = /^#x/i.test(value);
+        return String.fromCodePoint(Number.parseInt(value.slice(hexadecimal ? 2 : 1), hexadecimal ? 16 : 10));
+      }
+      return entities[value.toLowerCase()] ?? entity;
+    })
+    .replace(/\s+/g, ' ')
+    .trim();
+  const texts = (document, name, matches) => [...document.matchAll(new RegExp(`(<${name}\\b[^>]*>)([\\s\\S]*?)<\\/${name}>`, 'gi'))]
+    .filter(([, opening]) => matches(startTags(opening)[0]))
+    .map(([, , content]) => normalizeText(content));
+  const textByClass = (document, name, className) => {
+    const values = texts(document, name, (tag) => hasClass(tag, className));
+    assert.equal(values.length, 1, `Expected exactly one ${name}.${className}`);
+    return values[0];
+  };
+
+  for (const root of [sourceRoot, servedRoot]) {
+    const document = await readFile(new URL('index.html', root), 'utf8');
+    const expectedParagraphs = [
+      ['hero-kicker-ref', 'Тренування мозку, зміна мислення та створення нової якості життя'],
+      ['hero-formats', 'Допомагаю віднайти себе та створити життя, яке подобається саме вам. Зрозуміти свої справжні бажання, відчути власну цінність, знайти внутрішню опору, подолати страх змін і перестати відкладати життя на потім.'],
+      ['hero-emphasis', 'Не просто зрозуміти себе. А навчитися жити по-новому.'],
+      ['hero-location', 'Індивідуальні та групові сесії · онлайн та офлайн у Торонто'],
+      ['problem-lead', 'Ви можете усвідомлювати свої бажання та цілі, але продовжувати повторювати звичні реакції та поведінкові сценарії.'],
+      ['problem-detail', 'Розуміння проблеми — важливий початок, проте для змін потрібні нові дії та практики.'],
+    ];
+    for (const [className, expected] of expectedParagraphs) {
+      assert.equal(textByClass(document, 'p', className), expected, `Approved copy differs: ${className}`);
+    }
+    assert.deepEqual(texts(document, 'h1', ({ attributes }) => attributes.get('id') === 'hero-title'),
+      ['Від розуміння себе — до змін у житті']);
+    assert.deepEqual(texts(document, 'h2', ({ attributes }) => attributes.get('id') === 'problem-title'),
+      ['Ви знаєте, що хочете змінити. Але чому продовжуєте діяти по-старому?']);
+    const problemNote = textByClass(document, 'p', 'problem-note');
+    assert.match(problemNote, /автоматизованими звичками мислення й поведінки/);
+    assert.doesNotMatch(problemNote, /сформованими/);
+    assert.deepEqual(texts(document, 'li', (tag) => hasClass(tag, 'problem-callout')), [
+      'Постійно відкладаю важливі рішення',
+      'Залежу від думки інших і сумніваюся у власних рішеннях',
+      'Повторюю знайомі сценарії у житті',
+      'Хочу змін, але повертаюся до звичних реакцій',
+      'Прагну фінансового зростання, але відчуваю внутрішні обмеження',
+      'Відчуваю, що маю потенціал, але не знаю, як його реалізувати',
+    ]);
+    const upcoming = document.match(/<section\b(?=[^>]*\bid="upcoming")[^>]*>[\s\S]*?<\/section>/);
+    assert.ok(upcoming, 'The previously approved upcoming directions must remain present');
+    assert.deepEqual(texts(upcoming[0], 'h4', () => true), ['Проведення регресу', 'Самопрограмування']);
+  }
+});
+
 test('served HTML, editable sources, generated bundles, and active assets match source mirrors', async () => {
   const paths = new Set([
     'index.html', 'index.html.br', 'index.html.gz',

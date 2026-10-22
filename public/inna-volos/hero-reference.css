@@ -176,7 +176,7 @@ body > .site-header .header-cta {
 
 .hero .hero-formats {
   max-width: 635px;
-  margin: 0 0 32px;
+  margin: 0 0 18px;
   color: rgba(255, 255, 255, .88);
   font-family: var(--sans);
   font-size: 19px;
@@ -188,6 +188,16 @@ body > .site-header .header-cta {
   color: #fff;
   font-weight: 700;
   box-shadow: none;
+}
+
+.hero .hero-emphasis {
+  max-width: 600px;
+  margin: 0 0 28px;
+  color: #efc575;
+  font-family: var(--sans);
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.5;
 }
 
 .hero .hero-actions {
@@ -373,9 +383,14 @@ body > .site-header .header-cta {
 
   .hero .hero-formats {
     max-width: 350px;
-    margin-bottom: 26px;
+    margin-bottom: 16px;
     font-size: 16px;
     line-height: 1.55;
+  }
+
+  .hero .hero-emphasis {
+    margin-bottom: 24px;
+    font-size: 16px;
   }
 
   .hero .hero-actions {
