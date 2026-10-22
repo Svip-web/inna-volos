@@ -1,6 +1,6 @@
 {
   "fileCount": 157,
-  "totalBytes": 8225309,
+  "totalBytes": 8240330,
   "files": [
     {
       "name": ".gitattributes",
@@ -228,15 +228,15 @@
     },
     {
       "name": "public/inna-volos/index.html",
-      "bytes": 43977
+      "bytes": 45313
     },
     {
       "name": "public/inna-volos/index.html.br",
-      "bytes": 8304
+      "bytes": 8548
     },
     {
       "name": "public/inna-volos/index.html.gz",
-      "bytes": 10052
+      "bytes": 10356
     },
     {
       "name": "public/inna-volos/performance-motion.js",
@@ -280,19 +280,19 @@
     },
     {
       "name": "public/inna-volos/section-system.css",
-      "bytes": 54693
+      "bytes": 56660
     },
     {
       "name": "public/inna-volos/site.min.css",
-      "bytes": 281496
+      "bytes": 283213
     },
     {
       "name": "public/inna-volos/site.min.css.br",
-      "bytes": 37227
+      "bytes": 37453
     },
     {
       "name": "public/inna-volos/site.min.css.gz",
-      "bytes": 47791
+      "bytes": 48070
     },
     {
       "name": "public/inna-volos/site.min.js",
@@ -324,7 +324,7 @@
     },
     {
       "name": "scripts/inna-delivery.test.mjs",
-      "bytes": 7758
+      "bytes": 10633
     },
     {
       "name": "scripts/performance-motion.test.mjs",
@@ -548,15 +548,15 @@
     },
     {
       "name": "sites/inna-volos/index.html",
-      "bytes": 43977
+      "bytes": 45313
     },
     {
       "name": "sites/inna-volos/index.html.br",
-      "bytes": 8304
+      "bytes": 8548
     },
     {
       "name": "sites/inna-volos/index.html.gz",
-      "bytes": 10052
+      "bytes": 10356
     },
     {
       "name": "sites/inna-volos/performance-motion.js",
@@ -600,19 +600,19 @@
     },
     {
       "name": "sites/inna-volos/section-system.css",
-      "bytes": 54693
+      "bytes": 56660
     },
     {
       "name": "sites/inna-volos/site.min.css",
-      "bytes": 281496
+      "bytes": 283213
     },
     {
       "name": "sites/inna-volos/site.min.css.br",
-      "bytes": 37227
+      "bytes": 37453
     },
     {
       "name": "sites/inna-volos/site.min.css.gz",
-      "bytes": 47791
+      "bytes": 48070
     },
     {
       "name": "sites/inna-volos/site.min.js",

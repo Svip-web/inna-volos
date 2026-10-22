@@ -143,6 +143,48 @@ test('responsive hero preloads match the picture candidates and do not double-fe
   }
 });
 
+test('upcoming services contain only the two approved directions after the existing service grid', async () => {
+  for (const root of [sourceRoot, servedRoot]) {
+    const document = await readFile(new URL('index.html', root), 'utf8');
+    const documentTags = startTags(document);
+    const upcomingTags = documentTags.filter(({ attributes }) => attributes.get('id') === 'upcoming');
+    assert.equal(upcomingTags.length, 1, 'Each HTML mirror must contain exactly one upcoming subsection');
+    assert.ok(hasClass(upcomingTags[0], 'services-upcoming'));
+    assert.equal(upcomingTags[0].attributes.get('aria-labelledby'), 'upcoming-title');
+
+    const upcomingSections = [...document.matchAll(/<section\b(?=[^>]*\bid="upcoming")[^>]*>[\s\S]*?<\/section>/g)];
+    assert.equal(upcomingSections.length, 1);
+    const [upcoming] = upcomingSections;
+    const servicesStart = document.search(/<section\b[^>]*\bid="services"[^>]*>/);
+    const processStart = document.search(/<section\b[^>]*\bid="process"[^>]*>/);
+    assert.ok(servicesStart >= 0 && servicesStart < upcoming.index, 'Upcoming directions must follow the services heading');
+    assert.ok(upcoming.index + upcoming[0].length < processStart, 'Upcoming directions must appear before the process section');
+
+    const precedingServices = document.slice(servicesStart, upcoming.index);
+    const precedingTags = startTags(precedingServices);
+    assert.equal(precedingTags.filter((tag) => hasClass(tag, 'service-grid')).length, 1);
+    assert.equal(precedingTags.filter((tag) => tag.name === 'article' && hasClass(tag, 'service-card')).length, 4);
+    assert.equal([...precedingServices.matchAll(/<\/article>/g)].length, 4, 'All four main service cards must finish before upcoming directions');
+    assert.match(precedingServices, /<\/div>\s*$/, 'The main service grid must close before the upcoming subsection');
+
+    const sectionTags = startTags(upcoming[0]);
+    const cards = sectionTags.filter(({ name }) => name === 'article');
+    assert.equal(cards.length, 2);
+    assert.ok(cards.every((tag) => hasClass(tag, 'upcoming-card')));
+    assert.deepEqual(
+      [...upcoming[0].matchAll(/<h4\b[^>]*>([^<]*)<\/h4>/g)].map(([, name]) => name.trim()),
+      ['Проведення регресу', 'Самопрограмування'],
+    );
+    assert.match(upcoming[0], /<h3\b[^>]*\bid="upcoming-title"[^>]*>Незабаром<\/h3>/);
+    assert.match(upcoming[0], /<p\b[^>]*>У розробці<\/p>/);
+    assert.match(upcoming[0], /Нові напрями готуються\. Деталі та дати оголосимо окремо\./);
+    assert.ok(sectionTags.every(({ name, attributes }) =>
+      !['a', 'img', 'image', 'picture', 'script'].includes(name)
+      && !attributes.has('href') && !attributes.has('xlink:href')),
+    'Upcoming directions must not add links, images, or scripts');
+  }
+});
+
 test('served HTML, editable sources, generated bundles, and active assets match source mirrors', async () => {
   const paths = new Set([
     'index.html', 'index.html.br', 'index.html.gz',
